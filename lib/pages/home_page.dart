@@ -60,7 +60,7 @@ class _HomePageState extends State<HomePage> {
                         header: Container(
                           child: Text(
                             item.name,
-                            style: TextStyle(color: Colors.white),
+                            style: const TextStyle(color: Colors.white),
                           ),
                           padding: const EdgeInsets.all(12),
                           decoration:
@@ -70,10 +70,10 @@ class _HomePageState extends State<HomePage> {
                         footer: Container(
                           child: Text(
                             item.price.toString(),
-                            style: TextStyle(color: Colors.white),
+                            style: const TextStyle(color: Colors.white),
                           ),
                           padding: const EdgeInsets.all(12),
-                          decoration: BoxDecoration(color: Colors.black),
+                          decoration: const BoxDecoration(color: Colors.black),
                         ),
                       ));
                 },
