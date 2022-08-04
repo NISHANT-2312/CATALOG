@@ -97,24 +97,24 @@ class _LoginPageState extends State<LoginPage> {
                         child: InkWell(
                           onTap: () => moveToHome(context),
                           child: AnimatedContainer(
-                              duration: const Duration(seconds: 1),
-                              width: changeButton ? 50 : 150,
-                              height: 50,
-                              alignment: Alignment.center,
-                              child: changeButton
-                                  ? const Icon(
-                                      Icons.done,
+                            duration: const Duration(seconds: 1),
+                            width: changeButton ? 50 : 150,
+                            height: 50,
+                            alignment: Alignment.center,
+                            child: changeButton
+                                ? const Icon(
+                                    Icons.done,
+                                    color: Colors.white,
+                                  )
+                                : const Text(
+                                    "Login",
+                                    style: TextStyle(
                                       color: Colors.white,
-                                    )
-                                  : const Text(
-                                      "Login",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 20,
-                                      ),
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 20,
                                     ),
-                              Scafflod),
+                                  ),
+                          ),
                         ),
                       ),
                     ],
