@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
         floatingActionButton: FloatingActionButton(
           onPressed: () => Navigator.pushNamed(context, MyRoutes.cartRoute),
           child: const Icon(
-            CupertinoIcons.cart,
+            CupertinoIcons.cart_fill,
             color: Colors.white,
           ),
           backgroundColor: context.theme.buttonColor,
