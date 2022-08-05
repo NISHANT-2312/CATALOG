@@ -1,4 +1,4 @@
-// ignore_for_file: file_names, deprecated_member_use
+// ignore_for_file: file_names
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +10,7 @@ import 'package:velocity_x/velocity_x.dart';
 class AddToCart extends StatelessWidget {
   final Item catalog;
   const AddToCart({
-    Key? key,
+    required Key key,
     required this.catalog,
   }) : super(key: key);
 
@@ -18,7 +18,7 @@ class AddToCart extends StatelessWidget {
   Widget build(BuildContext context) {
     VxState.watch(context, on: [AddMutation, RemoveMutation]);
     final CartModel cart = (VxState.store as MyStore).cart;
-    bool isInCart = cart.items.contains(catalog) ?? false;
+    bool isInCart = cart.items.contains(catalog) != false;
     return ElevatedButton(
       onPressed: () {
         if (!isInCart) {
@@ -26,6 +26,7 @@ class AddToCart extends StatelessWidget {
         }
       },
       style: ButtonStyle(
+          // ignore: deprecated_member_use
           backgroundColor: MaterialStateProperty.all(context.theme.buttonColor),
           shape: MaterialStateProperty.all(
             const StadiumBorder(),
