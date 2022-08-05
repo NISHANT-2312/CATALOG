@@ -29,6 +29,7 @@ class HomeDetailPage extends StatelessWidget {
             "\$${catalog.price}".text.bold.xl4.red900.make(),
             AddToCart(
               catalog: catalog,
+              key: const Key("1"),
             ).wh(120, 50)
           ],
         ).p24(),
