@@ -17,6 +17,8 @@ class _LoginPageState extends State<LoginPage> {
 
   final _formkey = GlobalKey<FormState>();
 
+  get child => null;
+
   moveToHome(BuildContext context) async {
     if (_formkey.currentState!.validate()) {
       setState(() {
@@ -114,6 +116,24 @@ class _LoginPageState extends State<LoginPage> {
                                       fontSize: 20,
                                     ),
                                   ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 200,
+                      ),
+                      InkWell(
+                        onTap: () {
+                          moveToHome(context);
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            "Don't have an account? Sign up",
+                            style: TextStyle(
+                              color: (context.accentColor),
+                              fontSize: 15,
+                            ),
                           ),
                         ),
                       ),
